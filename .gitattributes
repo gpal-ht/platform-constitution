@@ -1,0 +1,4 @@
+# Normalize line endings in the repository (store as LF) to avoid the CRLF churn
+# that affects the sibling plane repos. Text is auto-detected; markdown is text.
+* text=auto
+*.md text

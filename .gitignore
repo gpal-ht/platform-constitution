@@ -1,0 +1,8 @@
+# OS / editor junk — the corpus is markdown only.
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.tmp
+.vscode/
+.idea/
