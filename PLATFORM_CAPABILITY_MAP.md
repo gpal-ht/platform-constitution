@@ -25,6 +25,31 @@
 
 Status legend: **Implemented** · **In Progress** · **Planned** · **Research**.
 
+> ### Status update (2026-07-27)
+> Further capability has been built and merged to `develop` since the 2026-07-25 note. This is a
+> non-constitutional status reconciliation (no taxonomy/ownership change), grounded in inspection
+> of `ecf` and `engineering_kb` on `develop`:
+> - **Control (`ecf`)** — the full-lifecycle **producer set is now built and registered** in
+>   `workflows/WORKFLOW_CATALOG.md`. Alongside the `released` **WF-REASON-0001** and
+>   **WF-TRANSFORM-0001**, six lifecycle-stage producers are registered as **`draft`** workflows:
+>   **WF-REQUIREMENTS-0001**, **WF-DESIGN-0001**, **WF-PLAN-0001**, **WF-VALIDATION-0001** (Test
+>   Plan), **WF-LEARNING-0001**, and **WF-TECHSPEC-0001** (Technical Specification). Five of them
+>   have each produced a **real, independently validated lifecycle document end-to-end on one case
+>   (WR-0004, WinUI)**, every run halting non-canonical at `waiting_for_human_approval`:
+>   **FRS-0004** (WF-REQUIREMENTS), **SDD-0004** (WF-DESIGN), **EP-0004** (WF-PLAN), **LR-0004**
+>   (WF-LEARNING), and **TP-0004** (WF-VALIDATION). **WF-USECASE** (Use Case Model) is **not yet on
+>   `develop`** (pending); **WF-TECHSPEC-0001** is registered but has not yet produced a document on
+>   this case.
+> - **Capability Matrix** coverage is now **11.9% (18 done / 151 produce)**, computed by the
+>   `tools/capability_matrix/` roll-up (`validate_capability_matrix.py`); a **Learning (stage 11)**
+>   section was added to the matrix (EDL-0019).
+> - **Engineering Decision Ledger** now holds **20 entries** (EDL-0001…0020).
+> - **Knowledge (`engineering_kb`)** grew to **77 decision guides across 18 disciplines** (75
+>   Complete, 2 In Progress), with **6 quality attributes** and **7 patterns**; disciplines added
+>   since the 48-guide catalog include Integration, Deployment & Release, Documentation &
+>   Knowledge, and Estimation & Planning.
+> - ECF remains at **v1.0.3**, EKB at **v0.2.1**.
+
 > ### Status update (2026-07-25)
 > The baseline evidence below is grounded at 0.2.0; the following deltas record capability
 > that has since been built and merged to `develop` across the three repositories. They are
@@ -53,7 +78,7 @@ Status legend: **Implemented** · **In Progress** · **Planned** · **Research**
 |---|---|---|
 | Versioned engineering knowledge (identity, history) | Implemented | `VERSION`, `knowledge_model/KNOWLEDGE_OBJECT_STANDARD` |
 | Knowledge model (objects, graph, retrieval) | Implemented | `knowledge_model/{KNOWLEDGE_GRAPH_MODEL, ENGINEERING_KNOWLEDGE_RETRIEVAL_MODEL}` |
-| Decision guides | Implemented | `knowledge_model/DECISION_GUIDE_MODEL`, `decision_guides/`; **full reserved catalog — 48 guides across 14 disciplines, all validated *(2026-07-25)*** |
+| Decision guides | Implemented | `knowledge_model/DECISION_GUIDE_MODEL`, `decision_guides/`; **77 guides across 18 disciplines (75 Complete, 2 In Progress) *(2026-07-27)*** |
 | Concepts, disciplines, patterns, practices, quality attributes | Implemented | corresponding directories; **6 quality attributes, 7 patterns *(2026-07-25)*** |
 | Evidence-driven canonicalization workflow (O3) | In Progress | philosophy present; execution engine maturing |
 | Automated knowledge lifecycle governance (O9 deepening) | Planned | — |
@@ -70,10 +95,9 @@ Status legend: **Implemented** · **In Progress** · **Planned** · **Research**
 | Reasoning workflow (recommendation) | Implemented | `workflows/reasoning/WF-REASON-0001`; **driven end-to-end on real Work Requests *(2026-07-25)*** |
 | Controlled Work Request → intent → phase → context → reasoning substrate (0.3) | Implemented | **0.3 shipped; substrate proven *(2026-07-25)*** |
 | Full-lifecycle production spine + Producer/Governor Boundary (scope-lifecycle amendment) | Implemented | **[AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md) ratified (Genesis) *(2026-07-25)*** |
-| Engineering Design stage — System Design Document (WF-DESIGN-0001) | Implemented | **`ecf/workflows/design/WF-DESIGN-0001`; validated; live EDR-0003 run in progress *(2026-07-25)*** |
-| Requirements (stage 2) & Planning (stage 6) stage workflows | In Progress | **WF-REQUIREMENTS, WF-PLAN — being built, not yet merged *(2026-07-25)*** |
-| Engineering Decision Ledger (append-only, all decision classes) | Implemented | **`ecf/ledger/` — 14 entries, hardened validator (`tools/decision_ledger`) *(2026-07-25)*** |
-| Capability Matrix coverage tracker | Implemented | **`ecf/planning/capability-matrix/` *(2026-07-25)*** |
+| Lifecycle-stage producers (Requirements, Design, Plan, Validation, Learning, TechSpec) | Implemented | **6 producers registered `draft` in `workflows/WORKFLOW_CATALOG.md`; five produced validated docs end-to-end on WR-0004 — FRS-0004, SDD-0004, EP-0004, LR-0004, TP-0004 — each halting at `waiting_for_human_approval`; WF-USECASE pending *(2026-07-27)*** |
+| Engineering Decision Ledger (append-only, all decision classes) | Implemented | **`ecf/ledger/` — 20 entries (EDL-0001…0020), hardened validator (`tools/decision_ledger`) *(2026-07-27)*** |
+| Capability Matrix coverage tracker | Implemented | **`ecf/planning/capability-matrix/`; roll-up reports 11.9% (18/151); Learning stage-11 section added *(2026-07-27)*** |
 | Authoritative engineering-model contract (O10) | Implemented | **O10 reached Partial at 0.4.0; contract in force *(2026-07-25)*** |
 | Universal generation from authoritative model (O10 deepening) | Planned | — |
 | Artifact & diagram standards *(relocated from "Artifact Plane" per FD-1)* | Implemented | `ecf/standards/{ARTIFACT_STANDARD, DIAGRAM_STANDARD}` |
@@ -169,6 +193,13 @@ obligation-based sequence.
 | Review Cadence | Quarterly, or on any plane/status change with evidence |
 
 ### Decision history
+- **Status update (2026-07-27)** — Non-constitutional status reconciliation (no taxonomy change):
+  recorded the full-lifecycle producer set now built and registered in ECF's `WORKFLOW_CATALOG.md`
+  (six `draft` lifecycle producers) and the five real, independently validated lifecycle documents
+  produced end-to-end on WR-0004 (FRS/SDD/EP/LR/TP-0004, each halting at `waiting_for_human_approval`);
+  Capability Matrix coverage at 11.9% (18/151) with a Learning stage-11 section; Engineering Decision
+  Ledger at 20 entries; `engineering_kb` at 77 guides / 18 disciplines. Plane taxonomy and ownership
+  unchanged.
 - **Status update (2026-07-25)** — Non-constitutional status reconciliation (no taxonomy change):
   recorded post-1.0 capability built and merged to `develop` — ECF at v1.0.3 as a ratified
   full-lifecycle production engine (Producer/Governor Boundary); Engineering Design (WF-DESIGN-0001)
