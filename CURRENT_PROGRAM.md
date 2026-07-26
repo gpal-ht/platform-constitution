@@ -12,14 +12,31 @@
 
 | Field | Value |
 |---|---|
-| Platform Version | **1.0.0 released** (`ecf`) · EKB **0.2.1** · context_switcher 0.2.0 |
+| Platform Version | **ECF `v1.0.3`** (1.0 Constitutional Baseline + post-1.0 point releases) · EKB **0.2.1** · context_switcher 0.2.0 |
 | Current Milestone | **1.0.0 — Constitutional Baseline** (CRR ratified 2026-07-18; see [CONSTITUTIONAL_READINESS_REPORT_0.9](CONSTITUTIONAL_READINESS_REPORT_0.9.md)) |
-| Target Milestone | **Post-1.0 deepening** — Partial → Strong (breadth + reality-gated items); first hardening: the gate-9 drift forcing-function (fires vacuously) |
+| Target Milestone | **Post-1.0 deepening** (Partial → Strong) **+ lifecycle-production coverage** (toward the redefined 2.0 — [AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md)) |
 | Current Health | 🟢 **Stable** |
-| Current Critical Path | Post-1.0: no existential gaps remain. Deepen the 9 Partial obligations toward Strong as real artifacts and events accrue. |
-| Current Release State | Private Git releases: ECF **`v1.0.0`**, EKB `v0.2.1`; context_switcher at 0.2.0 (develop carries the EDR-0002 projection) |
+| Current Critical Path | Post-1.0: no existential gaps remain. Deepen the 9 Partial obligations toward Strong, and grow lifecycle-stage coverage (Design shipped; Requirements + Planning in progress) as real artifacts accrue. |
+| Current Release State | Private Git releases: ECF **`v1.0.3`**, EKB `v0.2.1`; context_switcher at 0.2.0 (develop carries a live EDR-0003 design run in progress) |
 | Overall Status | 🟢 **1.0 Constitutional Baseline** — 12/12 obligations ≥ Partial on real evidence, independently audited (3 Strong: O2/O5/O9), 0 contradictions blocking Strong |
 | Constitutional Status | **Ratified (Genesis)** — Independent Reaffirmation Obligation **discharged** by the 0.9 independent audit (2026-07-18) |
+
+> ### Status update (2026-07-25)
+> **The dashboard above is current; the milestone/workstream/batch sections further down remain
+> the 0.3-era operational snapshot and are retained as history.** Since 1.0 shipped:
+> - **ECF scope-lifecycle amendment ratified (Genesis)** — ECF is now a **full-lifecycle
+>   document-production engine** under the **Producer/Governor Boundary**; **2.0 is redefined as
+>   lifecycle-production coverage** ([AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md)).
+> - **Engineering Design stage built** — `WF-DESIGN-0001` (System Design Document) is a real,
+>   validated workflow; a live **EDR-0003** design run is in progress.
+> - **Engineering Decision Ledger** live — append-only, all decision classes, **14 entries**, with
+>   a hardened validator; a **Capability Matrix** coverage tracker exists.
+> - **AI executor** gained bounded transient auto-retry; full suite **~1470 tests**.
+> - **`engineering_kb`** grew to the **full reserved catalog** — **48 decision guides / 14
+>   disciplines / 6 quality attributes / 7 patterns**, all validated.
+> - **Process:** clone-per-thread parallel fan-out is the default work policy (repo `CLAUDE.md`).
+> - **In progress (not yet merged):** stage workflows **WF-REQUIREMENTS** (stage 2) and
+>   **WF-PLAN** (stage 6).
 
 ### Constitutional document status *(recorded, not reinterpreted)*
 
@@ -41,7 +58,7 @@
 | Repo (Plane) | Released | Current branch | Notes |
 |---|---|---|---|
 | `engineering_kb` (Knowledge) | **0.2.1** | develop | Intent model disambiguated (EKP-0001); retrieval engine drives authoritative closures |
-| `ecf` (Control) | **1.0.0** | develop | Constitutional Baseline. Two workflows (WF-REASON-0001, WF-TRANSFORM-0001) driven end-to-end on real WRs; 3 canonical EDRs; cross-plane provenance; 1372 tests, 11 release gates. Bundles EKB 0.2.1 |
+| `ecf` (Control) | **1.0.3** | develop | Constitutional Baseline + post-1.0 point releases. Full-lifecycle production engine (Producer/Governor Boundary, ratified). Three workflows (WF-REASON-0001, WF-TRANSFORM-0001, **WF-DESIGN-0001**) driven end-to-end on real WRs; Engineering Decision Ledger (14 entries, hardened validator) + Capability Matrix tracker; cross-plane provenance; **~1470 tests**. Bundles EKB 0.2.1 |
 | `context_switcher` (Project) | 0.2.0 | feature/work-engine-project-registry (parked); develop carries WR-0001/0003/0004 + EDR-0002 projection | First consumer; WR-0001 → EDR-0002, WR-0004 → EDR-0003 |
 
 **Architectural maturity:** three constructive Planes operational; the Control Plane now
@@ -237,7 +254,7 @@ registry reconciled by WS-0. Full regression **774 tests green**. Owner: WS-0. C
 | Change class | T1 Operational |
 | Applies To | AI Engineering Platform (all repositories) |
 | Update Cadence | Weekly (Program Sync), or on any state change |
-| Last state basis | **ECF 0.3.0 released (2026-07-15); EKB 0.2.1; WF-REASON-0001 proven end-to-end on WR-0001** |
+| Last state basis | **ECF v1.0.3 (1.0 Constitutional Baseline + post-1.0 point releases); EKB 0.2.1; WF-DESIGN-0001 built & validated (live EDR-0003 run); Engineering Decision Ledger (14 entries) + Capability Matrix live; scope-lifecycle amendment ratified 2026-07-25** |
 
 ### Cross references
 - [PROGRAM_0.4](PROGRAM_0.4.md) · [PROGRAM_EXECUTION_PLAN](PROGRAM_EXECUTION_PLAN.md) · [PLATFORM_ROADMAP](PLATFORM_ROADMAP.md) · [PLATFORM_ARCHITECTURE](PLATFORM_ARCHITECTURE.md) · [PLATFORM_GOVERNANCE](PLATFORM_GOVERNANCE.md) · [PLATFORM_CAPABILITY_MAP](PLATFORM_CAPABILITY_MAP.md)

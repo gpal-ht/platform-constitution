@@ -60,19 +60,29 @@ of the platform repositories at released version **0.2.0**.
 **The road to 1.0 is now five obligations** — the Emerging set: **O3, O4, O7, O11, O12.**
 (O6 and O10 reached Partial at 0.4.0.) Everything else is deepening.
 
+> **Status update (2026-07-25).** The milestone line below has been **completed through 1.0**:
+> the **1.0 Constitutional Baseline** shipped and was independently audited — **12/12 obligations
+> ≥ Partial, 3 Strong (O2, O5, O9), 0 contradictions blocking Strong** (see
+> [CONSTITUTIONAL_READINESS_REPORT_0.9](CONSTITUTIONAL_READINESS_REPORT_0.9.md)). The maturity
+> snapshot above is the **0.2.0 baseline** and is retained as history; the current per-obligation
+> position is the 1.0 audited set. Post-1.0 work is *deepening* (Partial → Strong), organized by
+> [POST_1.0_DEEPENING_ROADMAP](POST_1.0_DEEPENING_ROADMAP.md), not new milestones.
+
 ---
 
 ## Current position
 
 | | |
 |---|---|
-| Released baseline | **0.4.0** *(ECF v0.4.0, 2026-07-16; 0.3.0 shipped 2026-07-16)* |
-| Current development line | **0.5.0-dev** |
-| Next milestone | **0.5.0** — working plan: [PROGRAM_0.5](PROGRAM_0.5.md) |
+| Released baseline | **1.0.0 Constitutional Baseline** *(ECF v1.0.0; advanced to **v1.0.3**). EKB v0.2.1; context_switcher 0.2.0* |
+| Current development line | **Post-1.0 deepening** — continuous/opportunistic (see [POST_1.0_DEEPENING_ROADMAP](POST_1.0_DEEPENING_ROADMAP.md)) |
+| Next milestone | **None on the constitutional line** — 1.0 is the constitutional baseline; deepening ships as point releases (v1.0.1 … v1.0.3) as done |
+| Scope note *(2026-07-25)* | ECF scope-lifecycle amendment ratified: ECF is a full-lifecycle production engine; **2.0** is redefined as lifecycle-production coverage ([AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md)) |
 
-**Honesty guard (O2/P2):** the platform is *not* "at 0.5" merely because reviewed work
-exists after 0.4.0. A version is claimed only when its milestone contract is met,
-validated, and released.
+**Honesty guard (O2/P2):** a version is claimed only when its milestone contract is met,
+validated, and released. 1.0 was claimed on that basis (independently audited); post-1.0
+point releases are claimed the same way. Obligations reach **Strong** only on real evidence —
+the platform does not manufacture triggering events (P2).
 
 ---
 
@@ -187,6 +197,15 @@ cross-cutting capabilities advance continuously.**
   shipped (`ecf` v0.3.0 / v0.4.0). O6 and O10 recorded at **Partial**; the Emerging set is now
   O3, O4, O7, O11, O12. 0.5 kicked off — founder rulings recorded in
   [PROGRAM_0.5](PROGRAM_0.5.md).
+- **1.0 shipped; post-1.0 deepening; scope reconceived (status update 2026-07-25)** —
+  Non-constitutional status reconciliation (the milestone line itself is unchanged). The
+  **1.0 Constitutional Baseline** shipped and was independently audited (12/12 ≥ Partial; 3
+  Strong: O2/O5/O9); ECF has advanced to **v1.0.3** on point releases. Post-1.0 direction is
+  continuous deepening ([POST_1.0_DEEPENING_ROADMAP](POST_1.0_DEEPENING_ROADMAP.md)). The
+  **ECF scope-lifecycle amendment** is ratified (Genesis): ECF is a full-lifecycle production
+  engine (Producer/Governor Boundary), **2.0 redefined as lifecycle-production coverage**
+  ([AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md)). Current-position snapshot
+  updated accordingly.
 
 ### Open questions
 - **Open Question 001** — long-term integrity of engineering judgment; targeted by 0.7.

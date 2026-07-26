@@ -25,6 +25,26 @@
 
 Status legend: **Implemented** · **In Progress** · **Planned** · **Research**.
 
+> ### Status update (2026-07-25)
+> The baseline evidence below is grounded at 0.2.0; the following deltas record capability
+> that has since been built and merged to `develop` across the three repositories. They are
+> reflected inline in the plane tables (marked *(2026-07-25)*) and summarized here:
+> - **Control (`ecf`)** shipped **1.0** (Constitutional Baseline) and has advanced to **v1.0.3**.
+>   The **ECF scope-lifecycle amendment is ratified (Genesis, 2026-07-25)**: ECF is now a
+>   **full-lifecycle document-production engine** under the **Producer/Governor Boundary**
+>   ([AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md)). A second lifecycle
+>   stage — **Engineering Design (WF-DESIGN-0001)** — is a built, validated workflow that
+>   produces a System Design Document (a live EDR-0003 design run is in progress). The
+>   **Engineering Decision Ledger** (14 entries, hardened validator) and a **Capability Matrix**
+>   coverage tracker now exist; the AI executor has bounded transient auto-retry. Full suite
+>   ~1470 tests.
+> - **Knowledge (`engineering_kb`)** grew from 3 to the **full reserved catalog — 48 decision
+>   guides across 14 disciplines, 6 quality attributes, 7 patterns**, all validated.
+> - **Process:** clone-per-thread parallel fan-out is the default work policy (recorded in the
+>   repositories' `CLAUDE.md`).
+> - **In progress (not yet merged):** stage workflows **WF-REQUIREMENTS** (stage 2) and
+>   **WF-PLAN** (stage 6).
+
 ---
 
 ## Knowledge Plane *(constructive)* — `engineering_kb`
@@ -33,8 +53,8 @@ Status legend: **Implemented** · **In Progress** · **Planned** · **Research**
 |---|---|---|
 | Versioned engineering knowledge (identity, history) | Implemented | `VERSION`, `knowledge_model/KNOWLEDGE_OBJECT_STANDARD` |
 | Knowledge model (objects, graph, retrieval) | Implemented | `knowledge_model/{KNOWLEDGE_GRAPH_MODEL, ENGINEERING_KNOWLEDGE_RETRIEVAL_MODEL}` |
-| Decision guides | Implemented | `knowledge_model/DECISION_GUIDE_MODEL`, `decision_guides/` |
-| Concepts, disciplines, patterns, practices, quality attributes | Implemented | corresponding directories |
+| Decision guides | Implemented | `knowledge_model/DECISION_GUIDE_MODEL`, `decision_guides/`; **full reserved catalog — 48 guides across 14 disciplines, all validated *(2026-07-25)*** |
+| Concepts, disciplines, patterns, practices, quality attributes | Implemented | corresponding directories; **6 quality attributes, 7 patterns *(2026-07-25)*** |
 | Evidence-driven canonicalization workflow (O3) | In Progress | philosophy present; execution engine maturing |
 | Automated knowledge lifecycle governance (O9 deepening) | Planned | — |
 | Safe supersession preserving history (O7) | Planned | corrigibility principle ratified; mechanism pending |
@@ -47,9 +67,14 @@ Status legend: **Implemented** · **In Progress** · **Planned** · **Research**
 | Workflow catalog & execution specification | Implemented | `workflows/{WORKFLOW_CATALOG, WORKFLOW_EXECUTION_SPECIFICATION}` |
 | Runtime contracts (transaction, run manifest, run state) | Implemented | `runtime_schemas/{RUNTIME_TRANSACTION_CONTRACT, RUN_MANIFEST_SCHEMA, RUN_STATE_SCHEMA}` |
 | Intent & phase classification results | Implemented | `runtime_schemas/{ENGINEERING_INTENT_RESULT_SCHEMA, ENGINEERING_PHASE_RESULT_SCHEMA}` |
-| Reasoning workflow (recommendation) | In Progress | `workflows/reasoning/WF-REASON-0001` |
-| Controlled Work Request → intent → phase → context → reasoning substrate (0.3) | In Progress | 0.3.0-dev line |
-| Authoritative engineering-model contract (O10) | Planned | ADR-0001 engineering intermediate representation is a seed |
+| Reasoning workflow (recommendation) | Implemented | `workflows/reasoning/WF-REASON-0001`; **driven end-to-end on real Work Requests *(2026-07-25)*** |
+| Controlled Work Request → intent → phase → context → reasoning substrate (0.3) | Implemented | **0.3 shipped; substrate proven *(2026-07-25)*** |
+| Full-lifecycle production spine + Producer/Governor Boundary (scope-lifecycle amendment) | Implemented | **[AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md) ratified (Genesis) *(2026-07-25)*** |
+| Engineering Design stage — System Design Document (WF-DESIGN-0001) | Implemented | **`ecf/workflows/design/WF-DESIGN-0001`; validated; live EDR-0003 run in progress *(2026-07-25)*** |
+| Requirements (stage 2) & Planning (stage 6) stage workflows | In Progress | **WF-REQUIREMENTS, WF-PLAN — being built, not yet merged *(2026-07-25)*** |
+| Engineering Decision Ledger (append-only, all decision classes) | Implemented | **`ecf/ledger/` — 14 entries, hardened validator (`tools/decision_ledger`) *(2026-07-25)*** |
+| Capability Matrix coverage tracker | Implemented | **`ecf/planning/capability-matrix/` *(2026-07-25)*** |
+| Authoritative engineering-model contract (O10) | Implemented | **O10 reached Partial at 0.4.0; contract in force *(2026-07-25)*** |
 | Universal generation from authoritative model (O10 deepening) | Planned | — |
 | Artifact & diagram standards *(relocated from "Artifact Plane" per FD-1)* | Implemented | `ecf/standards/{ARTIFACT_STANDARD, DIAGRAM_STANDARD}` |
 | Artifact generation/projection from engineering model (O10, P10) | In Progress | `ecf/generated/`, `engineering_kb/generated/` |
@@ -144,6 +169,12 @@ obligation-based sequence.
 | Review Cadence | Quarterly, or on any plane/status change with evidence |
 
 ### Decision history
+- **Status update (2026-07-25)** — Non-constitutional status reconciliation (no taxonomy change):
+  recorded post-1.0 capability built and merged to `develop` — ECF at v1.0.3 as a ratified
+  full-lifecycle production engine (Producer/Governor Boundary); Engineering Design (WF-DESIGN-0001)
+  built and validated; Engineering Decision Ledger and Capability Matrix live; `engineering_kb`
+  full reserved catalog (48 guides / 14 disciplines / 6 quality attributes / 7 patterns); stage
+  workflows WF-REQUIREMENTS and WF-PLAN in progress. Plane taxonomy and ownership unchanged.
 - **0.1.0** — Capability map assembled from read-only inspection of `engineering_kb`, `ecf`,
   and `context_switcher` at 0.2.0, plus the ratified obligation set. Plane taxonomy followed
   the establishment batch's eight-plane grouping, marked Draft.
