@@ -78,6 +78,7 @@ of the platform repositories at released version **0.2.0**.
 | Current development line | **Post-1.0 deepening** — continuous/opportunistic (see [POST_1.0_DEEPENING_ROADMAP](POST_1.0_DEEPENING_ROADMAP.md)) |
 | Next milestone | **None on the constitutional line** — 1.0 is the constitutional baseline; deepening ships as point releases (v1.0.1 … v1.0.3) as done |
 | Scope note *(2026-07-25)* | ECF scope-lifecycle amendment ratified: ECF is a full-lifecycle production engine; **2.0** is redefined as lifecycle-production coverage ([AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md)) |
+| Progress note *(2026-07-27)* | Toward the redefined 2.0: **6 lifecycle-stage producers built & registered** (`draft`) in ECF; **five validated documents produced end-to-end on WR-0004** (FRS/SDD/EP/LR/TP-0004, each halting at `waiting_for_human_approval`). Capability-Matrix coverage **11.9% (18/151)**; Engineering Decision Ledger **20 entries**; `engineering_kb` **77 guides / 18 disciplines**. ECF v1.0.3 / EKB v0.2.1 unchanged |
 
 **Honesty guard (O2/P2):** a version is claimed only when its milestone contract is met,
 validated, and released. 1.0 was claimed on that basis (independently audited); post-1.0
@@ -206,6 +207,16 @@ cross-cutting capabilities advance continuously.**
   engine (Producer/Governor Boundary), **2.0 redefined as lifecycle-production coverage**
   ([AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md)). Current-position snapshot
   updated accordingly.
+
+- **Lifecycle-production progress (status update 2026-07-27)** — Non-constitutional status
+  reconciliation (milestone line unchanged). Toward the redefined 2.0 (lifecycle-production
+  coverage): ECF now has **six lifecycle-stage producers built and registered** as `draft`
+  workflows (WF-REQUIREMENTS/DESIGN/PLAN/VALIDATION/LEARNING/TECHSPEC-0001), and **five real,
+  independently validated lifecycle documents produced end-to-end on WR-0004** (FRS-0004, SDD-0004,
+  EP-0004, LR-0004, TP-0004), each halting non-canonical at `waiting_for_human_approval`.
+  Capability-Matrix coverage stands at **11.9% (18/151)** with a Learning stage-11 section; the
+  Engineering Decision Ledger holds **20 entries**; `engineering_kb` reached **77 decision guides
+  across 18 disciplines**. WF-USECASE is not yet on `develop`.
 
 ### Open questions
 - **Open Question 001** — long-term integrity of engineering judgment; targeted by 0.7.

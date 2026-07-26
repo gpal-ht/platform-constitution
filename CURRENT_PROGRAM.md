@@ -16,10 +16,28 @@
 | Current Milestone | **1.0.0 — Constitutional Baseline** (CRR ratified 2026-07-18; see [CONSTITUTIONAL_READINESS_REPORT_0.9](CONSTITUTIONAL_READINESS_REPORT_0.9.md)) |
 | Target Milestone | **Post-1.0 deepening** (Partial → Strong) **+ lifecycle-production coverage** (toward the redefined 2.0 — [AMENDMENT_ECF_SCOPE_LIFECYCLE](AMENDMENT_ECF_SCOPE_LIFECYCLE.md)) |
 | Current Health | 🟢 **Stable** |
-| Current Critical Path | Post-1.0: no existential gaps remain. Deepen the 9 Partial obligations toward Strong, and grow lifecycle-stage coverage (Design shipped; Requirements + Planning in progress) as real artifacts accrue. |
-| Current Release State | Private Git releases: ECF **`v1.0.3`**, EKB `v0.2.1`; context_switcher at 0.2.0 (develop carries a live EDR-0003 design run in progress) |
+| Current Critical Path | Post-1.0: no existential gaps remain. Deepen the 9 Partial obligations toward Strong, and grow lifecycle-stage coverage — **six producers built; five validated documents produced on WR-0004; Capability-Matrix coverage 11.9% (18/151)** — as real artifacts accrue. |
+| Current Release State | Private Git releases: ECF **`v1.0.3`**, EKB `v0.2.1`; context_switcher at 0.2.0 (develop carries the five WR-0004 lifecycle runs — Requirements/Design/Plan/Learning/Validation — each halted at `waiting_for_human_approval`) |
 | Overall Status | 🟢 **1.0 Constitutional Baseline** — 12/12 obligations ≥ Partial on real evidence, independently audited (3 Strong: O2/O5/O9), 0 contradictions blocking Strong |
 | Constitutional Status | **Ratified (Genesis)** — Independent Reaffirmation Obligation **discharged** by the 0.9 independent audit (2026-07-18) |
+
+> ### Status update (2026-07-27)
+> Lifecycle-production progress since the 2026-07-25 note (non-constitutional; verified on
+> `ecf`/`engineering_kb` `develop`):
+> - **Full-lifecycle producer set built & registered** — `ecf/workflows/WORKFLOW_CATALOG.md` now
+>   registers, alongside the `released` **WF-REASON-0001** and **WF-TRANSFORM-0001**, six `draft`
+>   lifecycle-stage producers: **WF-REQUIREMENTS-0001**, **WF-DESIGN-0001**, **WF-PLAN-0001**,
+>   **WF-VALIDATION-0001** (Test Plan), **WF-LEARNING-0001**, **WF-TECHSPEC-0001** (Technical
+>   Specification). **WF-USECASE** (Use Case Model) is **not yet on `develop`**.
+> - **Five real, independently validated lifecycle documents** produced end-to-end on one case
+>   (**WR-0004, WinUI**), each halting non-canonical at `waiting_for_human_approval`: **FRS-0004**,
+>   **SDD-0004**, **EP-0004**, **LR-0004**, **TP-0004**.
+> - **Capability Matrix** roll-up (`tools/capability_matrix/`) reports **11.9% coverage (18/151)**;
+>   a **Learning (stage 11)** section was added (EDL-0019).
+> - **Engineering Decision Ledger** now holds **20 entries** (EDL-0001…0020).
+> - **`engineering_kb`** grew to **77 decision guides across 18 disciplines** (75 Complete, 2 In
+>   Progress); 6 quality attributes, 7 patterns.
+> - Versions unchanged: **ECF v1.0.3**, **EKB v0.2.1**.
 
 > ### Status update (2026-07-25)
 > **The dashboard above is current; the milestone/workstream/batch sections further down remain
@@ -58,7 +76,7 @@
 | Repo (Plane) | Released | Current branch | Notes |
 |---|---|---|---|
 | `engineering_kb` (Knowledge) | **0.2.1** | develop | Intent model disambiguated (EKP-0001); retrieval engine drives authoritative closures |
-| `ecf` (Control) | **1.0.3** | develop | Constitutional Baseline + post-1.0 point releases. Full-lifecycle production engine (Producer/Governor Boundary, ratified). Three workflows (WF-REASON-0001, WF-TRANSFORM-0001, **WF-DESIGN-0001**) driven end-to-end on real WRs; Engineering Decision Ledger (14 entries, hardened validator) + Capability Matrix tracker; cross-plane provenance; **~1470 tests**. Bundles EKB 0.2.1 |
+| `ecf` (Control) | **1.0.3** | develop | Constitutional Baseline + post-1.0 point releases. Full-lifecycle production engine (Producer/Governor Boundary, ratified). Two `released` workflows (WF-REASON-0001, WF-TRANSFORM-0001) plus **six `draft` lifecycle producers** (Requirements/Design/Plan/Validation/Learning/TechSpec); **five validated documents produced end-to-end on WR-0004** (FRS/SDD/EP/LR/TP-0004, each halting at `waiting_for_human_approval`). Engineering Decision Ledger (**20 entries**, hardened validator) + Capability Matrix tracker (**11.9%, 18/151**); cross-plane provenance. Bundles EKB 0.2.1 |
 | `context_switcher` (Project) | 0.2.0 | feature/work-engine-project-registry (parked); develop carries WR-0001/0003/0004 + EDR-0002 projection | First consumer; WR-0001 → EDR-0002, WR-0004 → EDR-0003 |
 
 **Architectural maturity:** three constructive Planes operational; the Control Plane now
@@ -254,7 +272,7 @@ registry reconciled by WS-0. Full regression **774 tests green**. Owner: WS-0. C
 | Change class | T1 Operational |
 | Applies To | AI Engineering Platform (all repositories) |
 | Update Cadence | Weekly (Program Sync), or on any state change |
-| Last state basis | **ECF v1.0.3 (1.0 Constitutional Baseline + post-1.0 point releases); EKB 0.2.1; WF-DESIGN-0001 built & validated (live EDR-0003 run); Engineering Decision Ledger (14 entries) + Capability Matrix live; scope-lifecycle amendment ratified 2026-07-25** |
+| Last state basis | **ECF v1.0.3 (1.0 Constitutional Baseline + post-1.0 point releases); EKB 0.2.1; six lifecycle producers built & registered (`draft`), five validated documents on WR-0004 (FRS/SDD/EP/LR/TP-0004); Capability Matrix 11.9% (18/151); Engineering Decision Ledger 20 entries; engineering_kb 77 guides / 18 disciplines — verified 2026-07-27** |
 
 ### Cross references
 - [PROGRAM_0.4](PROGRAM_0.4.md) · [PROGRAM_EXECUTION_PLAN](PROGRAM_EXECUTION_PLAN.md) · [PLATFORM_ROADMAP](PLATFORM_ROADMAP.md) · [PLATFORM_ARCHITECTURE](PLATFORM_ARCHITECTURE.md) · [PLATFORM_GOVERNANCE](PLATFORM_GOVERNANCE.md) · [PLATFORM_CAPABILITY_MAP](PLATFORM_CAPABILITY_MAP.md)
